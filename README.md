@@ -14,6 +14,7 @@
 ### Utils
 - Guake terminal (sudo apt-get install guake)
 - [Bash aliases](https://github.com/manparvesh/bashAliases)
+- Take a break
 
 ### Browsers
 - [Chrome](https://www.google.com/chrome‎)
