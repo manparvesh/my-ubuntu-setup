@@ -36,6 +36,8 @@
 #### Sublime packages
 - material theme
 
+- Indicator applets for Ubuntu
+
 ## Application settings
 ### IntelliJ formatter
 see [IntelliJ-formatter.xml](https://github.com/manparvesh/my-ubuntu-setup/blob/master/IntelliJ-formatter.xml)
