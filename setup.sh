@@ -4,7 +4,6 @@
 
 # add PPAs
 sudo add-apt-repository ppa:webupd8team/brackets -y
-sudo add-apt-repository ppa:webupd8team/java -y
 sudo add-apt-repository ppa:budgie-remix/ppa -y
 sudo add-apt-repository ppa:webupd8team/atom -y
 sudo add-apt-repository ppa:webupd8team/sublime-text-3 -y
@@ -44,25 +43,18 @@ sudo apt-get install sublime-text-installer -y
 ############################## / Text editors ##############################
 
 ############################## Graphics and Image editing ##############################
-sudo apt-get install gimp -y
-sudo apt-get install darktable -y
-sudo apt-get install inkscape -y
+# sudo apt-get install gimp -y
+# sudo apt-get install darktable -y
+# sudo apt-get install inkscape -y
 ############################## / Graphics and Image editing ##############################
 
 # pip
 sudo apt-get install python-pip -y
+sudo apt-get install python-dev -y
 
 # virtualenv
 sudo pip install virtualenv
 
-# npm
-sudo apt-get install npm -y
-
 # synaptic
 sudo apt-get install synaptic -y
 
-# vlc
-sudo apt-get install vlc -y
-
-# java installer
-sudo apt-get install oracle-java8-installer
