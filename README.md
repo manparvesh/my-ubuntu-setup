@@ -35,6 +35,8 @@
 - [Colored bash prompt](https://scottlinux.com/2013/07/08/enable-colorful-terminal-in-debian-and-ubuntu/)
 - [Color scheme for terminal](http://mayccoll.github.io/Gogh/)
 - Enable workspaces
+- Adapta theme
+- Oranchelo icon theme
 
 #### Utils
 - [Bash aliases](https://github.com/manparvesh/bashAliases)
