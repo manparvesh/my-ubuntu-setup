@@ -25,3 +25,9 @@ sudo apt-get install sublime-text-installer -y
 # todo install and setup zsh: theme, fonts, autosuggestionos
 # todo install gnome themes if possible
 # todo install jetbrains toolbox
+# todo setup aliases and stuff
+# todo setup jupyter nbextensions
+
+# installing nvidia drivers
+sudo add-apt-repository ppa:graphics-drivers/ppa 
+sudo apt install nvidia-driver-396 
