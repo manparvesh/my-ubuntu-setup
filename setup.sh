@@ -24,3 +24,4 @@ sudo apt-get install sublime-text-installer -y
 # todo install java
 # todo install and setup zsh: theme, fonts, autosuggestionos
 # todo install gnome themes if possible
+# todo install jetbrains toolbox
