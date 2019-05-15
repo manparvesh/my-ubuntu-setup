@@ -1,0 +1,2 @@
+bash before-ansible.sh
+/usr/bin/ansible-playbook setup.yml -vvv --ask-sudo-pass

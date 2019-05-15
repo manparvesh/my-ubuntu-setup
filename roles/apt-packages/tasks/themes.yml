@@ -1,0 +1,19 @@
+- name: add apt repository for adapta theme
+  apt_repository:
+    repo: ppa:tista/adapta
+
+- name: add apt repository for oranchelo orange theme
+  apt_repository:
+    repo: ppa:oranchelo/oranchelo-icon-theme
+
+- name: apt-get update
+  apt:
+    update_cache: yes
+
+- name: install adapta theme
+  apt:
+    name: adapta-gtk-theme
+
+- name: install oranchelo icon theme
+  apt:
+    name: oranchelo-icon-theme

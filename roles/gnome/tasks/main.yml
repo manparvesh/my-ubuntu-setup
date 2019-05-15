@@ -1,0 +1,9 @@
+- name: install chrome-gnome-shell
+  apt:
+    name: chrome-gnome-shell
+    update_cache: yes
+
+- name: install gnome-tweak-tool
+  apt:
+    name: gnome-tweak-tool
+    update_cache: yes

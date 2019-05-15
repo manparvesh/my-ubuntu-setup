@@ -1,0 +1,16 @@
+# - name: install zsh
+#   apt:
+#     name: zsh
+#     update_cache: yes
+
+# - name: oh my zsh
+#   get_url: 
+#     url: https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+#     dest: /home/manparvesh/oh-my-zsh-installer
+#     mode: 0644
+
+# - name: install oh my zsh
+#   command: sh /home/manparvesh/oh-my-zsh-installer
+
+- name: change default shell
+  shell: 'chsh -s $(which zsh)'
