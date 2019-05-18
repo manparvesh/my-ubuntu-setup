@@ -1,0 +1,8 @@
+- name: install vim
+  apt:
+    name: vim
+
+- name: copy vimrc
+  copy:
+    src: .vimrc
+    dest: "{{ home }}/.vimrc"

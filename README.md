@@ -1,5 +1,29 @@
 # My Ubuntu Setup
 
+##  New setup
+
+## Things to do manually
+
+- Probably need to change default shell manually, doesn't seem to work using ansible
+- Set keyboard and mouse speeds from Universal access > Typing > repeat keys
+- atom plugins and themes
+- sublime plugins and themes
+- install gnome extensions
+  - https://extensions.gnome.org/extension/1013/alt-alttab/
+  - https://extensions.gnome.org/extension/15/alternatetab/
+  - https://extensions.gnome.org/extension/1036/extensions/
+  - https://extensions.gnome.org/extension/921/multi-monitors-add-on/
+  - https://extensions.gnome.org/extension/104/netspeed/
+  - https://extensions.gnome.org/extension/1403/remove-alttab-delay/
+  - https://extensions.gnome.org/extension/1238/time/
+  - https://extensions.gnome.org/extension/1301/ubuntu-appindicators/
+  - https://extensions.gnome.org/extension/1300/ubuntu-dock/
+  - https://extensions.gnome.org/extension/19/user-themes/
+  - https://extensions.gnome.org/extension/21/workspace-indicator/
+- Install jupyter notebook extensions
+
+
+
 ## Things installed by [setup script](setup.sh)
 #### Appearance
 - Unity tweak tool

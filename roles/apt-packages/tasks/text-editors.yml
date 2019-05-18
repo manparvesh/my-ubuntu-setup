@@ -11,7 +11,6 @@
 - name: Ensure apt is set up to work with https sources
   apt:
     name: apt-transport-https
-    update_cache: yes
 
 - name: use stable channel
   shell: echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
@@ -21,22 +20,19 @@
     repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
     state: present
 
-- name: apt-get update
-  apt:
-    update_cache: yes
+- name: update cache
+  import_role:
+    name: update-apt
 
 - name: install sublime-text
   apt:
     name: sublime-text
-    update_cache: yes
 
 - name: install VSCode
   apt:
     name: code
-    update_cache: yes
 
 - name: install vim
   apt:
     name: vim
-    update_cache: yes
 

@@ -1,4 +1,15 @@
 ---
 - hosts: localhost
   roles:
-    - apt-packages
+    # - { role: apt-package, sudo: yes }
+    # - aliases
+    # - zsh
+    # - vagrant
+    # - anaconda
+    # - deeplearning
+    # - gnome
+    # - { role: java, sudo: yes }
+    # - { role: docker, sudo: yes }
+    # - { role: jetbrains, sudo: yes }
+    # - { role: jupyter, sudo: yes }
+    - { role: vim, sudo: yes }

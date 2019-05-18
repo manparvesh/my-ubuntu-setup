@@ -1,0 +1,8 @@
+- name: Download jetbrains toolbox and unarchive
+  unarchive:
+    src: https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.14.5179.tar.gz
+    dest: "{{ home }}"
+    remote_src: yes
+
+- name: install jetbrains toolbox
+  command: "{{ home }}/jetbrains-toolbox-1.14.5179/jetbrains-toolbox --install"

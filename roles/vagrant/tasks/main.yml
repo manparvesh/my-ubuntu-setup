@@ -1,0 +1,26 @@
+- name: install vagrant
+  get_url: 
+    url: https://releases.hashicorp.com/vagrant/2.2.4/vagrant_2.2.4_linux_amd64.zip
+    dest: "{{ home }}/vagrant.zip"
+
+- name: create folder for vagrant
+  file:
+    path: "{{ home }}/vagrant"
+    state: directory
+
+- name: extract vagrant.zip
+  unarchive:
+    src: "{{ home }}/vagrant.zip"
+    dest: "{{ home }}/vagrant"
+
+- name: copy vagrant executable to /usr/bin
+  become: true
+  copy:
+    src: "{{ home }}/vagrant/vagrant"
+    dest: /usr/bin/vagrant
+    mode: a+x
+
+- name: Install virtualbox using .deb package from internet
+  become: true
+  apt:
+    deb: https://download.virtualbox.org/virtualbox/6.0.8/virtualbox-6.0_6.0.8-130520~Ubuntu~bionic_amd64.deb

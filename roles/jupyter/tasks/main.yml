@@ -1,0 +1,20 @@
+- name: set anaconda bin
+  set_fact:
+    CONDA_BIN: "{{ home }}/anaconda3/bin"
+
+
+- name: source ~/.zshrc
+  shell: "source {{ home }}/.zshrc"
+  args:
+    executable: /bin/bash
+
+- name: install contrib extensions
+  shell: "source {{ CONDA_BIN }}/activate tf-gpu"
+  args:
+    executable: /bin/bash
+
+- name: install contrib extensions
+  shell: "{{ CONDA_BIN }}/conda install -y -c conda-forge jupyter_contrib_nbextensions"
+
+# - name: install js and css files
+#   shell: "{{ home }}/anaconda3/envs/tf-gpu/bin/jupyter contrib nbextension install --user"

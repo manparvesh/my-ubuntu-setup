@@ -1,0 +1,13 @@
+- name: Install docker using snap
+  shell: snap install docker
+
+- name: create the docker group
+  group: 
+    name: docker
+    state: present
+
+- name: add user to docker group
+  user: 
+    name: "{{ username }}"
+    groups: docker
+    append: yes

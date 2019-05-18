@@ -1,0 +1,34 @@
+- name: create required folders
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+  - "{{ home }}/.local/share/fonts/"
+  - "{{ home }}/.config/fontconfig/conf.d/"
+  - "{{ home }}/temp-fonts"
+
+- name: Download the latest version of the symbol font {{ item }} and fontconfig file
+  get_url:
+    url: "https://github.com/powerline/powerline/raw/develop/font/{{ item }}"
+    dest: "{{ home }}/temp-fonts/{{ item }}"
+  loop: 
+    - PowerlineSymbols.otf
+    - 10-powerline-symbols.conf
+
+- name: copy PowerlineSymbols.otf to ~/.local/share/fonts
+  copy:
+    src: "{{ home }}/temp-fonts/PowerlineSymbols.otf"
+    dest: "{{ home }}/.local/share/fonts/PowerlineSymbols.otf"
+
+- name: update font cache
+  become: true
+  command: fc-cache -vf {{ home }}/.local/share/fonts/
+
+- name: copy 10-powerline-symbols.conf to ~/.config/fontconfig/conf.d/
+  copy:
+    src: "{{ home }}/temp-fonts/10-powerline-symbols.conf"
+    dest: "{{ home }}/.config/fontconfig/conf.d/10-powerline-symbols.conf"
+
+- name: update font cache again
+  become: true
+  command: fc-cache -vf {{ home }}/.local/share/fonts/

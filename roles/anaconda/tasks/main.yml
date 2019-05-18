@@ -1,8 +1,8 @@
 - name: download installer
   get_url: 
     url: https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
-    dest: /home/manparvesh/anaconda-installer
+    dest: "{{ home }}/anaconda-installer"
     mode: 0644
 
 - name: run installer
-  command: "bash /home/manparvesh/anaconda-installer -b -p $HOME/anaconda"
+  command: "bash {{ home }}/anaconda-installer -b -p $HOME/anaconda"

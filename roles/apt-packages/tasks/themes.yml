@@ -6,10 +6,9 @@
   apt_repository:
     repo: ppa:oranchelo/oranchelo-icon-theme
 
-- name: apt-get update
-  apt:
-    update_cache: yes
-
+- name: update cache
+  import_role:
+    name: update-apt
 - name: install adapta theme
   apt:
     name: adapta-gtk-theme

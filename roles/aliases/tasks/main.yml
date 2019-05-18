@@ -1,0 +1,5 @@
+- name: copy aliases file
+  sudo: yes
+  copy:
+    src: .bash_aliases
+    dest: "{{ home }}/.bash_aliases"

@@ -1,7 +1,9 @@
 - name: Text editors
-  become: true
   import_tasks: text-editors.yml
 
 - name: themes and UI
-  become: true
   import_tasks: themes.yml
+
+- name: install terminator
+  apt:
+    name: terminator

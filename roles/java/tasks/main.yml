@@ -1,0 +1,10 @@
+- name: install java openjdk
+  apt:
+    name: "{{ item }}"
+  loop:
+    - default-jdk
+    - openjdk-8-jdk
+
+- name: update cache
+  import_role:
+    name: update-apt
