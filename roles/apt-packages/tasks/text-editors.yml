@@ -6,7 +6,6 @@
 - name: install python3-apt
   apt:
     name: python3-apt
-    update_cache: yes
 
 - name: Ensure apt is set up to work with https sources
   apt:
@@ -14,11 +13,6 @@
 
 - name: use stable channel
   shell: echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
-
-- name: add apt_repository for VSCode
-  apt_repository:
-    repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
-    state: present
 
 - name: update cache
   import_role:
@@ -28,11 +22,13 @@
   apt:
     name: sublime-text
 
-- name: install VSCode
-  apt:
-    name: code
-
 - name: install vim
   apt:
     name: vim
 
+- name: Install vscode using snap
+  shell: snap install --classic code
+
+- name: install chrome
+  apt:
+    deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

@@ -14,7 +14,7 @@
     mode: 0644
 
 - name: install oh my zsh
-  command: "sh {{ home }}/oh-my-zsh-installer"
+  command: "sh {{ home }}/oh-my-zsh-installer -y"
 
 - name: change default shell
   become: true
@@ -41,3 +41,5 @@
 
 - name: source ~/.zshrc
   shell: "source {{ home }}/.zshrc"
+  args:
+    executable: /bin/bash

@@ -1,6 +1,6 @@
 - name: set anaconda bin
   set_fact:
-    CONDA_BIN: "{{ home }}/anaconda3/bin"
+    CONDA_BIN: "{{ home }}/anaconda/bin"
 
 
 - name: source ~/.zshrc

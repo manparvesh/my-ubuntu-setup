@@ -1,6 +1,6 @@
 - name: add apt repository for nvidia drivers
   apt_repository:
-    repo: ppa:graphics-drivers
+    repo: ppa:graphics-drivers/ppa
 
 - name: update cache
   import_role:
@@ -8,17 +8,23 @@
 
 - name: install nvidia driver
   apt:
-    name: nvidia-396
+    name: nvidia-driver-396
 
 - name: set anaconda bin
   set_fact:
-    CONDA_BIN: "{{ home }}/anaconda3/bin"
+    CONDA_BIN: "{{ home }}/anaconda/bin"
+
+- name: create conda environment
+  command: "{{ CONDA_BIN }}/conda create --name tf-gpu"
+
+- name: activate conda environment
+  shell: "source {{ CONDA_BIN }}/activate tf-gpu"
+  args:
+    executable: /bin/bash
 
 - name: create conda environment and install stuff
   command: "{{ item }}"
   loop: 
-    - "{{ CONDA_BIN }}/conda create --name tf-gpu"
-    - source activate tf-gpu
     - "{{ CONDA_BIN }}/conda install -y tensorflow-gpu"
     - "{{ CONDA_BIN }}/conda install -y ipykernel"
     - "{{ CONDA_BIN }}/conda install -y keras"

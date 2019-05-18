@@ -1,0 +1,16 @@
+- name: create fact for ssh key
+  set_fact:
+    SSH_KEY: "{{ home }}/.ssh/github_key"
+
+- name: Check if the ssh key exists
+  stat:
+    path: "{{ SSH_KEY }}"
+  register: KEY_EXISTS
+
+- name: generate key
+  become: true
+  command: ssh-keygen -t rsa -b 4096 -f "{{ SSH_KEY }}" -N "" -C "manparveshsinghrandhawa@gmail.com"
+  when: KEY_EXISTS.stat.exists == false
+
+- name: start ssh agent
+  shell: eval "$(ssh-agent -s)"
