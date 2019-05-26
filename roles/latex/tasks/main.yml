@@ -1,0 +1,3 @@
+- name: install texlive-latex-extra using apt
+  snap:
+    name: texlive-latex-extra

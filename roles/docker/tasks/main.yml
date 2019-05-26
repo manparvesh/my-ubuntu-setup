@@ -1,5 +1,7 @@
-- name: Install docker using snap
-  shell: snap install docker
+- name: install docker using snap
+  snap:
+    name: docker
+    classic: yes
 
 - name: create the docker group
   group: 

@@ -1,0 +1,4 @@
+- name: install spotify using snap
+  snap:
+    name: spotify
+    classic: yes

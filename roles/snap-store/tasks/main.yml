@@ -1,0 +1,4 @@
+- name: install snap-store using snap
+  snap:
+    name: snap-store
+    classic: yes

@@ -1,0 +1,4 @@
+- name: install vscode using snap
+  snap:
+    name: code
+    classic: yes

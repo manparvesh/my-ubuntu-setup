@@ -1,0 +1,3 @@
+- name: install hugo using snap
+  snap:
+    name: hugo

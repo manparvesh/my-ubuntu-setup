@@ -1,0 +1,4 @@
+- name: install skype using snap
+  snap:
+    name: skype
+    classic: true

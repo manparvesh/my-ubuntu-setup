@@ -8,7 +8,7 @@
 
 - name: install nvidia driver
   apt:
-    name: nvidia-driver-396
+    name: nvidia-driver-430
 
 - name: set anaconda bin
   set_fact:

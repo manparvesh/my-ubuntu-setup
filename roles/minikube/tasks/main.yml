@@ -1,0 +1,5 @@
+- name: install minikube
+  get_url:
+      dest: /usr/bin/minikube
+      url: https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64 
+      mode: a+x

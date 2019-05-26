@@ -1,0 +1,3 @@
+- name: install gravit-designer using snap
+  snap:
+    name: gravit-designer

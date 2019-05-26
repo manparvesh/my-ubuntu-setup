@@ -1,0 +1,4 @@
+- name: install shutter using apt
+  apt:
+    name: shutter
+    update_cache: yes

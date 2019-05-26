@@ -1,0 +1,4 @@
+- name: install microk8s using snap
+  snap:
+    name: microk8s
+    classic: yes

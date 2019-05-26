@@ -1,0 +1,3 @@
+- name: install notepad-plus-plus using snap
+  snap:
+    name: notepad-plus-plus

@@ -1,0 +1,3 @@
+- name: install brave using snap
+  snap:
+    name: brave

@@ -1,0 +1,4 @@
+- name: install aws-cli using snap
+  snap:
+    name: aws-cli
+    classic: yes

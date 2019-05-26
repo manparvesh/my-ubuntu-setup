@@ -1,0 +1,4 @@
+- name: install atom using snap
+  snap:
+    name: atom
+    classic: yes

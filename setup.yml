@@ -1,16 +1,46 @@
 ---
 - hosts: localhost
   roles:
-    # - { role: apt-packages, sudo: yes }
-    - { role: git, sudo: yes }
+    # - { role: desktop-themes, sudo: yes } # these will not be needed for Ubuntu versions equal to or later than 19.04
+    # - { role: git, sudo: yes }
+    # - { role: sublime-text, sudo: yes }
+    # - { role: google-chrome, sudo: yes }
+    # - { role: terminator, sudo: yes }
+    # - { role: vscode, sudo: yes }
+    # - { role: spotify, sudo: yes }
+    # - { role: eclipse, sudo: yes }
     # - aliases
     # - zsh
     # - vagrant
     # - anaconda
-    # - { role: deeplearning, sudo: yes }
+    # - { role: deeplearning, sudo: yes } # deep learning setup for machines with nvidia GPUs
     # - { role: gnome, sudo: yes }
     # - { role: java, sudo: yes }
     # - { role: docker, sudo: yes }
     # - { role: jetbrains, sudo: yes }
     # - { role: jupyter, sudo: yes }
     # - { role: vim, sudo: yes }
+    # - { role: atom, sudo: yes }
+    # - { role: shutter, sudo: yes }
+    # - { role: gparted, sudo: yes }
+    # - { role: snap-store, sudo: yes }
+    # - { role: kubectl, sudo: yes }
+    # - { role: virtualbox, sudo: yes }
+    # - { role: minikube, sudo: yes }
+    # - { role: nodejs, sudo: yes }
+    # - { role: postman, sudo: yes }
+    # - { role: notepad-plus-plus, sudo: yes }
+    # - { role: golang, sudo: yes }
+    # - { role: slack, sudo: yes }
+    # - { role: skype, sudo: yes }
+    # - { role: brave, sudo: yes }
+    # - { role: okular, sudo: yes }
+    # - { role: hugo, sudo: yes }
+    # - { role: vlc, sudo: yes }
+    # - { role: microk8s, sudo: yes }
+    # - { role: aws-cli, sudo: yes }
+    # - { role: inkscape, sudo: yes }
+    # - { role: gravit-designer, sudo: yes }
+    # - { role: polarr, sudo: yes }
+    # - { role: darktable, sudo: yes }
+    # - { role: latex, sudo: yes }

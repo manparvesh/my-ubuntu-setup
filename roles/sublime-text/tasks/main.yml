@@ -1,0 +1,4 @@
+- name: install sublime-text using snap
+  snap:
+    name: sublime-text
+    classic: yes

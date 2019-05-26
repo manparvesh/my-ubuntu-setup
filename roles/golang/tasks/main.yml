@@ -1,0 +1,4 @@
+- name: install golang using snap
+  snap:
+    name: go
+    classic: true

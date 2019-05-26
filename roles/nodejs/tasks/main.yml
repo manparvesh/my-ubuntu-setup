@@ -1,0 +1,5 @@
+- name: install nodejs using snap
+  snap:
+    name: node
+    channel: 10/stable
+    classic: yes

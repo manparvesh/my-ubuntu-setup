@@ -1,13 +1,27 @@
 # My Ubuntu Setup
 
-##  New setup
+![](./desktop.png)
 
-## Things to do manually
+This is a script written for a new Ubuntu setup using Ansible. While I have tried to automate most of the things, there are still some manual steps that you might have to do according to your preferences.
+
+## How to use
+
+1. Edit the `setup.yml` file in this repository and un-comment all the items you want to install to your machine.
+2. While running on a fresh Ubuntu machine / VM, it's better to run `./run-all` after cloning this repository. If you have `python`, `python-pip`, `ansible` (>=2.8) and `git` installed, you can simply run `./run` in the terminal.
+
+## Manual operations
 
 - Probably need to change default shell manually, doesn't seem to work using ansible
 - Set keyboard and mouse speeds from Universal access > Typing > repeat keys
-- atom plugins and themes
+- VSCode plugins and themes
+  - Material theme
+  - Markdown all in one
+  - LaTeX workshop
+  - Ansible
+  - Go
 - sublime plugins and themes
+  - Materialize
+  - Materialize Appicons
 - install gnome extensions
   - https://extensions.gnome.org/extension/1013/alt-alttab/
   - https://extensions.gnome.org/extension/15/alternatetab/
@@ -22,68 +36,61 @@
   - https://extensions.gnome.org/extension/21/workspace-indicator/
 - Install jupyter notebook extensions
 
+## Things that you can install using this script
 
-
-## Things installed by [setup script](setup.sh)
-#### Appearance
-- Unity tweak tool
-- [Cairo-dock](http://linuxpitstop.com/install-cairo-dock-on-ubuntu-15-04/)
-- [Ultra flat icons](http://www.noobslab.com/2015/01/make-linux-more-elegant-with-ultra-flat.html) (very good icons)
-
-#### Utils
-- Guake terminal
-
-#### Development
-- [Atom](https://atom.io/)
-- [Sublime](https://www.sublimetext.com/3)
-
-#### Installed packages
-- npm
-- [java JDK 8](http://tecadmin.net/install-oracle-java-8-jdk-8-ubuntu-via-ppa/)
-- python pip
-- [g++14](http://scholtyssek.org/blog/2015/06/11/install-gcc-with-c14-support-on-ubuntumint/)
-- [gradle](https://gradle.org/gradle-download/)
-- synaptic package manager
-- vlc
-
-#### Image editing
-- shotwell
-- gimp
-- darktable
-
-#### design
-- Inkscape
-
-## Things to be done manually
-#### UI
-- [Colored bash prompt](https://scottlinux.com/2013/07/08/enable-colorful-terminal-in-debian-and-ubuntu/)
-- [Color scheme for terminal](http://mayccoll.github.io/Gogh/)
-- Enable workspaces
-- Adapta theme
-- Oranchelo icon theme
-
-#### Utils
-- [Bash aliases](https://github.com/manparvesh/bashAliases)
-- Take a break
-
-#### Development
-- [Eclipse](https://eclipse.org/downloads/)
-
-#### Browsers
-- [Chrome](https://www.google.com/chrome‎)
-- [Vivaldi](https://vivaldi.com/download/?lang=en)
-
-#### Atom packages
-- activate-power-mode
-- markdown-preview-plus
-- markdown-scroll-sync
-- markdown-writer
-- preview
-- qolor
-- genesys (theme)
-- html-preview
-
-## Application settings
-### IntelliJ formatter
-see [IntelliJ-formatter.xml](https://github.com/manparvesh/my-ubuntu-setup/blob/master/IntelliJ-formatter.xml)
-
+- deeplearning: deep learning setup for machines with GPUs
+  - anaconda
+  - nvdia GPU driver
+  - tensorflow-gpu
+  - keras
+- programming languages
+  - java
+  - Golang
+- Ubuntu aliases
+- text editors:
+  - vim
+  - atom
+  - vscode
+  - sublime text
+  - notepad++
+- web browsers
+  - google chrome
+  - brave
+- cloud
+  - docker
+  - kubectl
+  - minikube
+  - microk8s
+  - aws-cli
+- design
+  - gravit-designer
+  - darktable
+  - gimp
+  - inkscape
+  - polarr
+- devtools
+  - anaconda
+  - nodejs
+  - latex
+  - postman
+  - eclipse
+  - git
+  - jetbrains toolbox
+  - jupyter
+  - vagrant
+- themes and stuff
+  - desktop themes
+  - gnome desktop
+- utilities
+  - gparted
+  - shutter
+  - skype
+  - slack
+  - snap store
+  - virtualbox
+- enternainment
+  - spotify
+  - vlc
+- terminal
+  - terminator
+  - zsh
