@@ -84,7 +84,25 @@ alias gpl='git pull'
 gev () { gac "$@" && gp; }
 
 alias gs='git status -u'
-alias gc='git clone'
+
+# for cloning a git repo, use it like this: gc github.com manparvesh my-ubuntu-setup
+gc(){
+	git_host='$1'
+	git_username='$2'
+	git_repo='$3'
+
+	git clone "git@$1:$2/$3.git"
+	cd $3
+}
+
+# for cloning a github repo, use it like this: ghc manparvesh my-ubuntu-setup
+ghc(){
+	github_username='$1'
+	github_repo='$2'
+
+	gc github.com $1 $2	
+}
+
 alias gch='git checkout'
 alias gchb='git checkout -b'
 alias gchm='git checkout --'
