@@ -94,3 +94,19 @@ This is a script written for a new Ubuntu setup using Ansible. While I have trie
 - terminal
   - terminator
   - zsh
+
+## TODO
+
+- pandoc
+- SimpleScreenRecorder
+- foxit reader
+- plantUML
+- vscode extensions:
+  - ansible
+  - material theme
+  - LaTeX workshop
+  - markdown all in one
+  - todo++
+  - vscode-pandoc
+  - window colors
+- cuda 10.2
